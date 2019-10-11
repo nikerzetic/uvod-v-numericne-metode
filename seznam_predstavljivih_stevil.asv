@@ -1,0 +1,14 @@
+function seznam = seznam_predstavljivih_stevil(b,4,L,U)
+
+%se NaN, Inf, -Inf
+velikost = b^t-1;
+mozna_stevila = zeros(t, velikost);
+
+for i = 1:t
+    for j = 1:
+    
+   
+    
+end
+
+end
