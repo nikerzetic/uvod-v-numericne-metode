@@ -1,7 +1,7 @@
 function seznam = seznam_predstavljivih_stevil(b,t,L,U)
 
 %se NaN, Inf, -Inf, 0
-dolzina = ((abs(U) + abs(L) - 1) * (b-1) + b) * (b^(t-1));
+dolzina = 2 * ((abs(U) + abs(L) - 1) * (b-1) + b) * (b^(t-1));
 seznam = zeros(1,dolzina);
 M = matrika_stevk(b,t);
 
@@ -10,19 +10,23 @@ for i = 1:t
 B(1,i) = b^-i;
 end
 
-c = 0;
-for i = 1:b^t
+c = 1;
+for i = 2:b^t
     
-    s = sum(B * M(i,:)');
+    s = M(i,:) * B';
     
-    seznam(c) = s * b^L;
-    c = c+1;
+    produkt = s * b^L;
+    seznam(c) = produkt;
+    seznam(c+1) = - produkt;
+    c = c+2;
     if M(i,1) ~= 0
         
         for e = (L+1):U
             
-            seznam(c) = s * b^e;
-            c = c+1;
+            produkt = s * b^e;
+            seznam(c) = produkt;
+            seznam(c+1) = - produkt;
+            c = c+2;
 
         end
         
