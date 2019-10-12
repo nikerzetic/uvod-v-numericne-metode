@@ -2,18 +2,27 @@ function seznam = seznam_predstavljivih_stevil(b,t,L,U)
 
 %se NaN, Inf, -Inf
 velikost = b^t;
-M = zeros(t, velikost);
+M = zeros(velikost, t);
 
 for j = 1:t
     
-    for k = 0:(b-1)
+    for k = 1:(b^(j-1)) % stevilo ciklov
+        
+        dolzina_cikla = b^(t - j + 1);
+        
+        for l = 1:b % stevke
     
-        for i = 1:(b^(t - 1))
+            prostor_stevke = b^(t - j);
+            
+            for i = 1:prostor_stevke % stevilo kopij vsake stevke
 
-            M(i,j) = k;
+                v = (k-1)*dolzina_cikla + (l-1)*prostor_stevke + i;
+                M(v,j) = l-1;
 
+            end
+    
         end
-    
+            
     end
     
 end
