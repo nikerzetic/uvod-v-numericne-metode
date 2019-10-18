@@ -5,6 +5,7 @@
 ### Anonimna funkcija
 
 > g = @(x) - x.^2 + 8 * x - 12
+
 dobro je, ce funkcija dela na vektorjih
 
 > x = 0:1e-3:8;
