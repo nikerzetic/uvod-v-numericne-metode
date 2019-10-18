@@ -1,0 +1,14 @@
+function [x,X,k] = iteracija(g,x0,tol,N)
+
+r = x0;
+x = g(r);
+X = [x0x];
+
+k = 1;
+while k < N
+    
+    
+    
+end
+
+end
