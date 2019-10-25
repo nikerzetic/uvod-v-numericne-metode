@@ -25,3 +25,11 @@ dobro je, ce funkcija dela na vektorjih
 > hold off
 
 > fzero(f, t0)
+
+> fzero(@(x)x+4?exp(x2),1,optimset(?TolX?,1e?16))
+
+### Kvizi
+
+> format long
+
+Decimalno piko spremeniti v vejico

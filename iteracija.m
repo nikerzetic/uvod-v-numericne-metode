@@ -1,5 +1,7 @@
 function [x,X,k] = iteracija(g,x0,tol,N)
 
+% N - maksimalno stevilo korakov, tol - toleranca
+
 r = x0;
 x = g(r);
 X = [x0, x];
@@ -14,7 +16,7 @@ while k < N
     
     X = [X x];
     
-    if abs(r - x) > tol
+    if abs(r - x) < tol
         
         break
         

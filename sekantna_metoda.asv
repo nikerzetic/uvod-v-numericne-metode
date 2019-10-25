@@ -1,0 +1,20 @@
+function [x,X,k] = sekantna_metoda(f,x0,x1,tol,N)
+
+g = @(t0,t1) t0 - f(t0)*(t0 - t1) / (f(t0) - f(t1));
+
+X = [x0 x1];
+x = g(x1,x0);
+k = 0;
+r1 = x1;
+r0 = x;
+
+while k < N
+   
+    k = k + 1;
+    r1 = r0;
+    r0 = x;
+    x = g(x,r0);
+    
+end
+
+end
