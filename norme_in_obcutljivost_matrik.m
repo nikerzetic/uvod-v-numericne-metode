@@ -1,0 +1,11 @@
+% 1. (b)
+A = matrikaNorme(10)
+norm(A,2)
+max(sqrt(eig(A'*A)))
+max(svd(A))
+
+% 1. (c)
+norm(A,1)
+norm(A,Inf)
+norm(A,'fro')
+max(max(abs(A)))

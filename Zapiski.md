@@ -33,3 +33,13 @@ dobro je, ce funkcija dela na vektorjih
 > format long
 
 Decimalno piko spremeniti v vejico
+
+### Norme
+
+> diag
+
+> eig - lastne vrednosti
+
+> svd - singularne vrednosti
+
+
