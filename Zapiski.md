@@ -42,4 +42,16 @@ Decimalno piko spremeniti v vejico
 
 > svd - singularne vrednosti
 
+### LU razcep
+
+> [L,U,P] = lu(A1)
+
+vedno dodamo P, ker drugace vrne PL, U
+
+> tril
+
+> triu
+
+
+
 
