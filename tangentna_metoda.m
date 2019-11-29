@@ -3,7 +3,7 @@ function [x,X,k] = tangentna_metoda(f,df,x0,tol,N)
 g = @(x) x - f(x)/df(x);
 x = g(x0);
 X = [x0 x];
-k = 0;
+k = 1;
 
 while k < N
    
