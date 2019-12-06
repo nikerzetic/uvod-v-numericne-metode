@@ -52,6 +52,14 @@ vedno dodamo P, ker drugace vrne PL, U
 
 > triu
 
+### Risanje funkcije vec spremenljivk
 
+> [X,Y] = meshgrid(linspace(-4,4,100),linspace(-2,2,100))
+
+> Z = f(X,Y)
+
+> surf(X,Y,Z)
+
+> contour(X,Y,Z)
 
 
