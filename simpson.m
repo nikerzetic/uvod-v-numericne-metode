@@ -13,7 +13,7 @@ Sf  = f(a);
 x = a:h:b;
 
 
-for i = 1:m-1
+for i = 2:m
     
     Sf = Sf + 4*f(x(2*i-1)) + 2*f(x(2*i));
     
